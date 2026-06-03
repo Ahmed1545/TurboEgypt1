@@ -4,7 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Turbo Egypt — فوطة 1200 GSM</title>
+
+<link rel="preconnect" href="https://static.wixstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://static.wixstatic.com">
+
+<meta name="description" content="فوطة تنشيف السيارات الاحترافية 1200 GSM من Turbo Egypt. امتصاص أعلى، تنشيف أسرع، وبدون أي خدوش للطلاء.">
+<meta property="og:title" content="Turbo Egypt — فوطة 1200 GSM">
+<meta property="og:description" content="فوطة تنشيف السيارات الاحترافية 1200 GSM. امتصاص أعلى، تنشيف أسرع، وبدون أي خدوش.">
+<meta property="og:image" content="https://static.wixstatic.com/media/f8bc45_1d280f30fc9443b092dc9e125083e5af~mv2.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yoursite.netlify.app/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="preload" href="https://static.wixstatic.com/media/f8bc45_1d280f30fc9443b092dc9e125083e5af~mv2.jpg" as="image" fetchpriority="high">
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -34,7 +49,6 @@ body{
   overflow-x:hidden;
 }
 
-/* Layered site background pattern */
 .site-bg {
     position: fixed;
     inset: 0;
@@ -48,18 +62,15 @@ body{
     opacity: 0.8;
 }
 
-/* كلاس مخصص لضبط اتجاه الأرقام مع علامة الزائد */
 .ltr-num {
   direction: ltr;
   display: inline-block;
 }
 
-/* ═══════════════ CANVAS BG ═══════════════ */
 #bg-canvas{
   position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.6;
 }
 
-/* ═══════════════ NAV ═══════════════ */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   display:flex;align-items:center;justify-content:space-between;
@@ -90,7 +101,6 @@ nav{
 }
 .nav-cta:hover{box-shadow:0 0 35px var(--glow);transform:translateY(-1px)}
 
-/* ═══════════════ HERO ═══════════════ */
 .hero{
   position:relative;z-index:1;
   min-height:100vh;
@@ -149,7 +159,6 @@ nav{
   animation:fadeDown .6s ease .2s both;
 }
 
-/* ── HERO PRICE BADGE ── */
 .hero-price-badge {
   display: inline-block;
   background: rgba(239, 68, 68, 0.1);
@@ -169,7 +178,6 @@ nav{
   font-weight: normal;
 }
 
-/* ── HERO STATS ── */
 .hero-stats{
   display:flex;align-items:center;justify-content:center;
   gap:0;margin-bottom:44px;
@@ -190,7 +198,6 @@ nav{
 .stat-val span{font-size:14px;color:var(--blue3)}
 .stat-lbl{font-size:12px;color:var(--muted);margin-top:4px;font-weight:700}
 
-/* ── HERO BUTTONS ── */
 .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;animation:fadeDown .6s ease .4s both}
 .btn-wa{
   display:flex;align-items:center;gap:10px;
@@ -203,7 +210,6 @@ nav{
 .btn-wa:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(37,211,102,0.4)}
 .btn-wa svg {width:22px;height:22px;flex-shrink:0}
 
-/* ── SCROLL INDICATOR ── */
 .scroll-hint{
   margin-top:50px;color:var(--muted);font-size:12px;font-weight:700;
   display:flex;flex-direction:column;align-items:center;gap:8px;
@@ -221,7 +227,6 @@ nav{
 }
 @keyframes scrollDot{0%{opacity:1;top:5px}100%{opacity:0;top:16px}}
 
-/* ═══════════════ PROBLEM SECTION ═══════════════ */
 .problem-section{
   position:relative;z-index:1;
   padding:80px 5%;
@@ -253,7 +258,6 @@ nav{
 .problem-title{font-size:16px;font-weight:900;color:#ff8080;margin-bottom:8px}
 .problem-desc{font-size:14px;color:#6b7280;line-height:1.7}
 
-/* ═══════════════ COMPARISON ═══════════════ */
 .compare-section{
   position:relative;z-index:1;
   padding:80px 5%;
@@ -296,7 +300,12 @@ nav{
 .vs-icon{font-size:18px;flex-shrink:0;width:24px;text-align:center}
 .vs-text{color:#aaa;font-weight:600}
 .vs-card.good .vs-text{color:#cde}
-.cmp-table{width:100%;border-collapse:collapse;margin-top:20px}
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+.cmp-table{width:100%;border-collapse:collapse;margin-top:20px; min-width: 500px;}
 .cmp-table th{
   padding:14px 16px;font-size:12px;font-weight:900;
   text-transform:uppercase;letter-spacing:1px;
@@ -333,7 +342,6 @@ nav{
 .c-meh{color:#888}
 .c-blue{color:var(--blue3);font-weight:900}
 
-/* ═══════════════ PRODUCT SHOWCASE ═══════════════ */
 .product-section{
   position:relative;z-index:1;
   padding:80px 5%;
@@ -381,7 +389,6 @@ nav{
 }
 .product-stock strong{color:var(--blue3);font-size:18px;display:block}
 
-/* Product info */
 .price-block{
   background:var(--card);border:1px solid var(--border);
   border-radius:14px;padding:24px;margin:24px 0;
@@ -407,7 +414,6 @@ nav{
 }
 .price-note{font-size:13px;color:var(--blue3);font-weight:700;margin-top:8px}
 
-/* FORM FIELDS */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -457,7 +463,55 @@ nav{
   padding:6px 12px;border-radius:6px;
 }
 
-/* Sizes & Qty & Payment */
+.shipping-row{
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(29,110,245,0.06);border:1px solid rgba(29,110,245,0.15);
+  border-radius:8px;padding:10px 14px;margin-top:10px;
+  font-size:14px;font-weight:700;color:#aac3ff;
+}
+.shipping-row .sh-lbl{display:flex;align-items:center;gap:6px}
+.shipping-row .sh-val{color:#fff;font-weight:900}
+
+.grand-total-row{
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);
+  border-radius:8px;padding:10px 14px;margin-top:6px;
+  font-size:15px;font-weight:900;
+}
+.grand-total-row .gt-lbl{color:#86efac}
+.grand-total-row .gt-val{color:#4ade80;font-size:18px}
+
+.form-select{
+  background:var(--card2);
+  border:1px solid var(--border);
+  color:#fff;
+  padding:16px;
+  border-radius:8px;
+  font-size:15px;
+  font-family:inherit;
+  outline:none;
+  transition:all 0.2s;
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236b7280' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:left 14px center;
+  cursor:pointer;
+}
+.form-select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(29,110,245,0.15)}
+.form-select option{background:var(--card2);color:#fff}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-optional-label{
+  font-size:11px;color:var(--muted);font-weight:700;
+  margin-top:-6px;margin-bottom:2px;padding-right:4px;
+}
+
+/* تحسينات السرعة: تفعيل content-visibility للأقسام غير المرئية لتسريع المعالجة */
+.problem-section,.compare-section,.reviews-section, footer{
+  content-visibility:auto;
+  contain-intrinsic-size: 1000px;
+}
+
 .sizes-row{display:flex;gap:10px;margin-top:16px}
 .sz{
   flex:1;background:var(--card2);border:2px solid var(--border);
@@ -465,6 +519,8 @@ nav{
   transition:all .2s;
 }
 .sz:hover,.sz.on{border-color:var(--blue);background:rgba(29,110,245,0.1)}
+.sz.sold-out{opacity:0.45;cursor:not-allowed;border-color:var(--border) !important;background:var(--card2) !important;}
+.sz.sold-out .sz-s{color:#ef4444;}
 .sz-n{font-size:18px;font-weight:900;color:#fff;display:block}
 .sz-s{font-size:11px;color:#777;margin-top:3px}
 
@@ -504,7 +560,6 @@ nav{
   margin-bottom: 24px;
 }
 
-/* ═══════════════ COUNTDOWN ═══════════════ */
 .countdown-strip{
   position:relative;z-index:1;
   background:linear-gradient(90deg,rgba(29,110,245,0.12),rgba(29,110,245,0.06),rgba(29,110,245,0.12));
@@ -528,7 +583,6 @@ nav{
 .cd-qty{font-size:13px;color:#888;font-weight:700}
 .cd-qty b{color:var(--blue3)}
 
-/* ═══════════════ REVIEWS ═══════════════ */
 .reviews-section{
   position:relative;z-index:1;
   padding:80px 5%;
@@ -559,7 +613,6 @@ nav{
   font-size:11px;font-weight:700;padding:3px 10px;border-radius:50px;margin-top:4px;
 }
 
-/* ═══════════════ FINAL CTA ═══════════════ */
 .final-cta{
   position:relative;z-index:1;
   padding:100px 5%;text-align:center;
@@ -587,7 +640,6 @@ footer{
 }
 footer span{color:var(--blue2);font-weight:900}
 
-/* ═══════════════ ANIMATIONS ═══════════════ */
 @keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:none}
@@ -617,30 +669,15 @@ footer span{color:var(--blue2);font-weight:900}
   width:fit-content;
 }
 
-.value-compare{
-  margin-top:18px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.value-compare div{
-  background:rgba(255,255,255,0.03);
-  border:1px solid var(--border);
-  padding:12px 14px;
-  border-radius:10px;
-  color:#aaa;
-  font-size:14px;
-}
-.value-compare b{color:#fff;}
-
 .mobile-sticky-cta{display:none;}
+
 @media(max-width:768px){
-  /* تعديل مقاسات الموبايل للقائمة العلوية */
+  #bg-canvas { display: none; }
   nav { padding: 12px 4%; }
   .nav-logo { font-size: 16px; }
   .nav-cta { font-size: 11px; padding: 8px 12px; }
-
+  .form-row-2 { grid-template-columns: 1fr; }
+  
   .mobile-sticky-cta{
     display:block;
     position:fixed;
@@ -667,6 +704,7 @@ footer span{color:var(--blue2);font-weight:900}
     box-shadow:0 10px 30px rgba(29,110,245,0.25);
   }
   body{padding-bottom:90px;}
+  
   .vs-grid{grid-template-columns:1fr;}
   .vs-sep{display:none}
   .product-inner{grid-template-columns:1fr;gap:40px}
@@ -680,7 +718,15 @@ footer span{color:var(--blue2);font-weight:900}
   .cmp-table th,.cmp-table td{padding:10px 8px}
 }
 
-/* شاشات الموبايل الصغيرة جداً */
+@media(max-width:480px){
+  .sizes-row{flex-direction:column;}
+  .hero-stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .stat+.stat::before{display:none;}
+}
+
 @media(max-width:380px){
   .nav-logo { font-size: 14px; }
   .nav-cta { font-size: 10px; padding: 6px 8px; }
@@ -711,11 +757,11 @@ footer span{color:var(--blue2);font-weight:900}
   </p>
 
   <div class="hero-price-badge">
-    🔥 السعر 180 ج بدل <del>300 ج</del> لفترة محدودة
+    🔥 السعر يبدأ من <span id="hero-badge-price">180</span> ج بدل <del><span id="hero-badge-old">300</span> ج</del> لفترة محدودة
   </div>
 
   <div class="hero-product-preview">
-    <img src="https://static.wixstatic.com/media/f8bc45_1d280f30fc9443b092dc9e125083e5af~mv2.jpg" alt="Turbo Egypt Towel">
+    <img src="https://static.wixstatic.com/media/f8bc45_1d280f30fc9443b092dc9e125083e5af~mv2.jpg" alt="Turbo Egypt Towel" fetchpriority="high" loading="eager" decoding="async">
   </div>
 
   <div class="hero-stats">
@@ -811,7 +857,8 @@ footer span{color:var(--blue2);font-weight:900}
         </div>
       </div>
     </div>
-    <div class="reveal">
+    
+    <div class="reveal table-wrapper">
       <table class="cmp-table">
         <thead>
           <tr>
@@ -840,8 +887,8 @@ footer span{color:var(--blue2);font-weight:900}
     <div class="product-img-wrap reveal">
       <div class="product-img-glow"></div>
       <div class="product-gsm"><span class="big">1200</span><span class="small">GSM</span></div>
-      <img src="https://static.wixstatic.com/media/f8bc45_1d280f30fc9443b092dc9e125083e5af~mv2.jpg" alt="فوطة مايكروفايبر 1200 GSM Turbo Egypt" style="background-color:#1c1c1c; min-height: 200px;">
-      <div class="product-stock"><strong id="stock-n">47</strong>قطعة متبقية</div>
+      <img src="https://static.wixstatic.com/media/f8bc45_1d280f30fc9443b092dc9e125083e5af~mv2.jpg" alt="فوطة مايكروفايبر 1200 GSM Turbo Egypt" style="background-color:#1c1c1c; min-height: 200px;" loading="lazy" decoding="async">
+      <div class="product-stock"><strong id="stock-n">47</strong> قطعة متبقية</div>
     </div>
 
     <div class="reveal">
@@ -851,41 +898,69 @@ footer span{color:var(--blue2);font-weight:900}
       <div class="price-block">
         <div class="price-tag-new">🔥 سعر حصري لفترة محدودة</div>
         <div class="price-num"><span id="total-price">180</span><sup>ج</sup></div>
-        <div class="price-old-wrap">
-          <span class="price-old"><span id="total-old-price">300</span> ج</span>
-          <span class="save-badge">وفّر <span id="total-save">120</span> ج</span>
-        </div>
+          <div class="price-old-wrap">
+            <span class="price-old"><span id="total-old-price">300</span> ج</span>
+            <span class="save-badge">وفّر <span id="total-save">120</span> ج</span>
+          </div>
         <div class="price-note">أقل من تكلفة غسيلتين… وهتستخدمها سنين</div>
       </div>
 
       <p style="font-size:14px;color:#8899bb;font-weight:900;margin-bottom:10px">1. اختار المقاس:</p>
       <div class="sizes-row">
-        <div class="sz" onclick="pickSize(this, '30×40')"><span class="sz-n">30×40</span><span class="sz-s">للتفاصيل</span></div>
-        <div class="sz on" onclick="pickSize(this, '40×40')"><span class="sz-n">40×40</span><span class="sz-s">الأكثر طلباً ⭐</span></div>
-        <div class="sz" onclick="pickSize(this, '40×60')"><span class="sz-n">40×60</span><span class="sz-s">مساحة أكبر</span></div>
+        <div class="sz on" onclick="pickSize(this, '30×40', 180)"><span class="sz-n">30×40</span><span class="sz-s">للتفاصيل</span></div>
+        <div class="sz" onclick="pickSize(this, '40×40', 230)"><span class="sz-n">40×40</span><span class="sz-s">الأكثر طلباً ⭐</span></div>
+        <div class="sz sold-out"><span class="sz-n">40×60</span><span class="sz-s">نفدت الكمية ❌</span></div>
       </div>
 
       <p style="font-size:14px;color:#8899bb;font-weight:900;margin-bottom:0px;margin-top:20px;">2. حدد الكمية المطلوبة:</p>
       <div class="qty-row" dir="ltr" style="justify-content: flex-end;">
-        <button class="qty-btn" onclick="changeQty(1)">+</button>
+        <button type="button" class="qty-btn" onclick="changeQty(1)">+</button>
         <span class="qty-val" id="qty-val">1</span>
-        <button class="qty-btn" onclick="changeQty(-1)">-</button>
+        <button type="button" class="qty-btn" onclick="changeQty(-1)">-</button>
       </div>
 
       <form onsubmit="event.preventDefault(); sendOrder();">
         <p style="font-size:14px;color:#8899bb;font-weight:900;margin-bottom:10px;margin-top:20px;">3. بيانات التوصيل:</p>
         <div class="form-group">
-          <input type="text" id="cust-name" required placeholder="الإسم بالكامل" class="form-input">
-          <input type="tel" id="cust-phone" required placeholder="رقم الهاتف" class="form-input" dir="rtl">
-          <input type="text" id="cust-address" required placeholder="العنوان بالتفصيل (المحافظة، المنطقة، الشارع)" class="form-input">
+          <div class="form-row-2">
+            <input type="text" id="cust-name" required placeholder="الإسم بالكامل" class="form-input">
+            <input type="tel" id="cust-phone" required placeholder="رقم الهاتف (01xxxxxxxxx)" class="form-input" dir="ltr" style="text-align:right">
+          </div>
+          <input type="tel" id="cust-phone2" placeholder="رقم هاتف تاني (اختياري)" class="form-input" dir="ltr" style="text-align:right">
+          <div class="form-optional-label">رقم احتياطي للتواصل</div>
+          <select id="cust-gov" required class="form-select">
+            <option value="" disabled selected>اختار المحافظة</option>
+            <option>القاهرة</option><option>الجيزة</option><option>الإسكندرية</option>
+            <option>البحيرة</option><option>الغربية</option><option>المنوفية</option>
+            <option>القليوبية</option><option>الشرقية</option><option>الدقهلية</option>
+            <option>دمياط</option><option>كفر الشيخ</option><option>الإسماعيلية</option>
+            <option>بورسعيد</option><option>السويس</option><option>شمال سيناء</option>
+            <option>جنوب سيناء</option><option>البحر الأحمر</option><option>مطروح</option>
+            <option>الوادي الجديد</option><option>الفيوم</option><option>بني سويف</option>
+            <option>المنيا</option><option>أسيوط</option><option>سوهاج</option>
+            <option>قنا</option><option>الأقصر</option><option>أسوان</option>
+          </select>
+          <input type="text" id="cust-district" required placeholder="المنطقة أو الحي" class="form-input">
+          <input type="text" id="cust-street" required placeholder="اسم الشارع ورقم المبنى" class="form-input">
+          <input type="text" id="cust-floor" placeholder="الدور والشقة (اختياري)" class="form-input">
+          <div class="form-optional-label">للتوصيل بشكل أسرع ودقيق</div>
         </div>
 
-        <div class="cod-badge">
-          <span>💰</span> الدفع عند الاستلام
+        <div class="shipping-row">
+          <span class="sh-lbl">🚚 رسوم الشحن لكل مصر</span>
+          <span class="sh-val"><span id="shipping-display">75</span> ج</span>
+        </div>
+        <div class="grand-total-row">
+          <span class="gt-lbl">💰 الإجمالي مع الشحن</span>
+          <span class="gt-val"><span id="grand-total">255</span> ج</span>
+        </div>
+
+        <div class="cod-badge" style="margin-top:14px">
+          <span>💰</span> الدفع عند الاستلام فقط
         </div>
 
         <div class="product-btns">
-          <button type="submit" class="btn-wa-full">
+          <button type="submit" class="btn-wa-full" id="submit-btn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.109 1.503 5.845L.057 23.428a.75.75 0 0 0 .915.915l5.584-1.446C8.169 23.536 10.065 24 12 24c6.626 0 12-5.374 12-12S18.626 0 12 0z"/></svg>
             تأكيد الطلب — <span id="btn-total-price">180</span> ج
           </button>
@@ -894,7 +969,7 @@ footer span{color:var(--blue2);font-weight:900}
 
       <div class="trust-row" style="margin-top: 15px;">
         <div class="trust-chip">🚚 توصيل لكل مصر</div>
-        <div class="trust-chip">↩️ استرجاع 7 أيام</div>
+        <div class="trust-chip">↩️ استرجاع 14 يوم</div>
       </div>
     </div>
   </div>
@@ -926,7 +1001,7 @@ footer span{color:var(--blue2);font-weight:900}
         <div class="review-stars">★★★★★</div>
         <p class="review-text">"جربت كتير قبلها بس دي الأولى اللي حسيت إن عربيتي جافة فعلاً من أول مسحة. الطلاء مش فيه أي خطوط. ممتازة جداً."</p>
         <div class="review-author">
-          <div class="review-avatar">أم</div>
+          <div class="review-avatar">أح</div>
           <div><div class="review-name">أحمد محمد</div><div class="review-city">القاهرة</div><div class="review-verified">✓ مشترى موثق</div></div>
         </div>
       </div>
@@ -956,13 +1031,13 @@ footer span{color:var(--blue2);font-weight:900}
   <div class="final-btns reveal">
     <a href="#order-section" class="btn-wa">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.109 1.503 5.845L.057 23.428a.75.75 0 0 0 .915.915l5.584-1.446C8.169 23.536 10.065 24 12 24c6.626 0 12-5.374 12-12S18.626 0 12 0z"/></svg>
-      اطلب عبر واتساب — 180 ج
+      اطلب عبر واتساب — <span id="final-btn-price">180</span> ج
     </a>
   </div>
   <div class="final-guarantees reveal">
     <div class="guarantee">🚚 توصيل لكل مصر</div>
     <div class="guarantee">💰 دفع عند الاستلام</div>
-    <div class="guarantee">↩️ استرجاع 7 أيام</div>
+    <div class="guarantee">↩️ استرجاع 14 يوم</div>
     <div class="guarantee">📞 دعم 24/7</div>
   </div>
 </section>
@@ -971,152 +1046,271 @@ footer span{color:var(--blue2);font-weight:900}
   <p>© 2026 <span>TURBO EGYPT</span> — Accelerate The Legacy</p>
 </footer>
 
-<script>
-// ── State variables for the Order ──
-let selectedSize = '40×40';
-let quantity = 1;
-const basePrice = 180;
-const baseOldPrice = 300;
+<div class="mobile-sticky-cta">
+  <a href="#order-section">
+    <svg viewBox="0 0 24 24" fill="currentColor" style="width:20px;height:20px;flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.117.549 4.109 1.503 5.845L.057 23.428a.75.75 0 0 0 .915.915l5.584-1.446C8.169 23.536 10.065 24 12 24c6.626 0 12-5.374 12-12S18.626 0 12 0z"/></svg>
+    اطلب الآن — <span id="sticky-price">180</span> ج
+  </a>
+</div>
 
-function pickSize(el, size) {
+<script>
+// ── CONFIGURATION ──
+const CONFIG = {
+  WHATSAPP_NUMBER: "201150494609",
+  SHIPPING_FEE: 75,
+};
+
+// ── State Variables ──
+let selectedSize = '30×40';
+let quantity = 1;
+let currentBasePrice = 180;
+
+const sizePrices = {
+  '30×40': { price: 180, oldPrice: 300 },
+  '40×40': { price: 230, oldPrice: 380 },
+};
+
+function updatePriceDisplay() {
+  const newPrice = quantity * currentBasePrice;
+  const total = newPrice + CONFIG.SHIPPING_FEE;
+  const sizeData = sizePrices[selectedSize];
+  const newOldPrice = quantity * sizeData.oldPrice;
+  const newSave = newOldPrice - newPrice;
+
+  document.getElementById('total-price').innerText = newPrice;
+  document.getElementById('total-old-price').innerText = newOldPrice;
+  document.getElementById('total-save').innerText = newSave;
+  
+  const grandTotalEl = document.getElementById('grand-total');
+  if(grandTotalEl) grandTotalEl.innerText = total; // الإجمالي النهائي مضاف له الشحن
+
+  // الزراير كلها هتعرض سعر الفوطة بس بدون الشحن لزيادة التحويل
+  const btnTotal = document.getElementById('btn-total-price');
+  if(btnTotal) btnTotal.innerText = newPrice; 
+  
+  const heroBadgePrice = document.getElementById('hero-badge-price');
+  if(heroBadgePrice) heroBadgePrice.innerText = newPrice;
+  
+  const heroBadgeOld = document.getElementById('hero-badge-old');
+  if(heroBadgeOld) heroBadgeOld.innerText = newOldPrice;
+  
+  const heroBtnPrice = document.getElementById('hero-btn-price');
+  if(heroBtnPrice) heroBtnPrice.innerText = newPrice;
+  
+  const finalBtnPrice = document.getElementById('final-btn-price');
+  if(finalBtnPrice) finalBtnPrice.innerText = newPrice;
+
+  const stickyPrice = document.getElementById('sticky-price');
+  if(stickyPrice) stickyPrice.innerText = newPrice; 
+}
+
+function pickSize(el, size, price) {
   document.querySelectorAll('.sz').forEach(s => s.classList.remove('on'));
   el.classList.add('on');
   selectedSize = size;
+  currentBasePrice = price;
+  updatePriceDisplay();
 }
 
 function changeQty(step) {
   quantity += step;
   if(quantity < 1) quantity = 1;
   document.getElementById('qty-val').innerText = quantity;
-  
-  // Dynamic Pricing Update
-  const newPrice = quantity * basePrice;
-  const newOldPrice = quantity * baseOldPrice;
-  const newSave = newOldPrice - newPrice;
-  
-  // Update section prices
-  document.getElementById('total-price').innerText = newPrice;
-  document.getElementById('total-old-price').innerText = newOldPrice;
-  document.getElementById('total-save').innerText = newSave;
-  document.getElementById('btn-total-price').innerText = newPrice;
-  
-  // Update sticky mobile button price
-  const stickyPrice = document.getElementById('sticky-price');
-  if(stickyPrice) {
-    stickyPrice.innerText = newPrice;
+  updatePriceDisplay();
+}
+
+function convertArabicNumbers(str) {
+  if (!str) return str;
+  const arabicNumbers = [/٠/g, /١/g, /٢/g, /٣/g, /٤/g, /٥/g, /٦/g, /٧/g, /٨/g, /٩/g];
+  for (let i = 0; i < 10; i++) {
+    str = str.replace(arabicNumbers[i], i);
   }
-  
-  // Update Hero Button price 
-  const heroBtnPrice = document.getElementById('hero-btn-price');
-  if(heroBtnPrice) {
-    heroBtnPrice.innerText = newPrice;
-  }
+  return str;
 }
 
 function sendOrder() {
   const custName = document.getElementById('cust-name').value.trim();
-  const custPhone = document.getElementById('cust-phone').value.trim();
-  const custAddress = document.getElementById('cust-address').value.trim();
+  let custPhone = document.getElementById('cust-phone').value.trim();
+  const district = document.getElementById('cust-district').value.trim();
+  const street = document.getElementById('cust-street').value.trim();
+  const floor = document.getElementById('cust-floor').value.trim();
+  const gov = document.getElementById('cust-gov').value.trim();
+  let custPhone2 = document.getElementById('cust-phone2').value.trim();
 
-  // تأكد من ادخال البيانات
-  if (!custName || !custPhone || !custAddress) {
-    alert("برجاء إدخال جميع بيانات التوصيل (الإسم، رقم الهاتف، العنوان) لإتمام الطلب بنجاح.");
+  if (custName.length < 3) {
+    alert("برجاء إدخال الإسم بشكل صحيح (ثنائي على الأقل).");
+    document.getElementById('cust-name').focus();
+    return;
+  }
+  if (district.length < 3 || street.length < 4) {
+    alert("برجاء إدخال تفاصيل العنوان والمنطقة بشكل دقيق (مثال: شارع كذا متفرع من كذا).");
+    document.getElementById('cust-street').focus();
+    return;
+  }
+  if (!gov) {
+    alert("برجاء اختيار المحافظة.");
+    document.getElementById('cust-gov').focus();
     return;
   }
 
-  const phone = "201150494609";
-  const newPrice = quantity * basePrice;
-  
+  custPhone = convertArabicNumbers(custPhone);
+  custPhone2 = convertArabicNumbers(custPhone2);
+
+  const phoneClean = custPhone.replace(/\s|-/g, '');
+  const phoneRegex = /^(\+201|01)[0-9]{9}$/;
+  if (!phoneRegex.test(phoneClean)) {
+    alert("برجاء إدخال رقم هاتف مصري صحيح (مثال: 01012345678)");
+    document.getElementById('cust-phone').focus();
+    return;
+  }
+
+  const custAddress = `${gov} - ${district} - ${street}${floor ? ' - ' + floor : ''}`;
+  const newPrice = quantity * currentBasePrice;
+  const total = newPrice + CONFIG.SHIPPING_FEE;
+
   const msg = `أهلاً، عايز أطلب فوطة مايكروفايبر 1200 GSM من Turbo Egypt\n\n` +
               `📋 *بيانات الطلب:*\n` +
               `- المقاس: ${selectedSize}\n` +
               `- الكمية: ${quantity} قطعة\n` +
-              `- الإجمالي: ${newPrice} جنيه (الدفع عند الاستلام)\n\n` +
+              `- سعر المنتجات: ${newPrice} جنيه\n` +
+              `- الشحن: ${CONFIG.SHIPPING_FEE} جنيه\n` +
+              `- الإجمالي النهائي: ${total} جنيه (الدفع عند الاستلام)\n\n` +
               `👤 *بيانات التوصيل:*\n` +
               `- الإسم: ${custName}\n` +
               `- الموبايل: ${custPhone}\n` +
-              `- العنوان: ${custAddress}`;
-              
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
-  window.open(url, '_blank');
+              `${custPhone2 ? `- موبايل إضافي: ${custPhone2}\n` : ''}` +
+              `- العنوان الكامل: ${custAddress}`;
+
+  const url = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+  const submitBtn = document.getElementById('submit-btn');
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = '⏳ جاري تحويلك لواتساب...';
+  submitBtn.style.opacity = '0.8';
+  submitBtn.style.pointerEvents = 'none';
+
+  window.location.href = url;
+
+  setTimeout(() => {
+    submitBtn.innerHTML = originalText;
+    submitBtn.style.opacity = '1';
+    submitBtn.style.pointerEvents = 'auto';
+  }, 3000);
 }
 
-// ── Animated canvas background ──
-const canvas = document.getElementById('bg-canvas');
-const ctx = canvas.getContext('2d');
-let W,H,particles=[];
-function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight}
-resize();window.addEventListener('resize',resize);
-class Particle{
-  constructor(){this.reset()}
-  reset(){
-    this.x=Math.random()*W;this.y=Math.random()*H;
-    this.vx=(Math.random()-.5)*0.4;this.vy=(Math.random()-.5)*0.4;
-    this.r=Math.random()*1.5+0.5;this.a=Math.random()*0.5+0.1;
-  }
-  update(){
-    this.x+=this.vx;this.y+=this.vy;
-    if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();
-  }
-  draw(){
-    ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
-    ctx.fillStyle=`rgba(30,110,245,${this.a})`;ctx.fill();
-  }
-}
-for(let i=0;i<80;i++) particles.push(new Particle());
-function drawLines(){
-  for(let i=0;i<particles.length;i++){
-    for(let j=i+1;j<particles.length;j++){
-      const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
-      const d=Math.sqrt(dx*dx+dy*dy);
-      if(d<120){
-        ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);
-        ctx.strokeStyle=`rgba(30,110,245,${0.15*(1-d/120)})`;ctx.lineWidth=0.5;ctx.stroke();
+// ── تأجيل تحميل التأثيرات والأشياء الثقيلة عشان الصفحة تفتح فوراً ──
+window.addEventListener('load', function() {
+  
+  // ── Animated canvas background ──
+  const canvas = document.getElementById('bg-canvas');
+  if(canvas) {
+    const ctx = canvas.getContext('2d');
+    let W,H,particles=[];
+    let lastWidth = window.innerWidth;
+
+    function resize(){
+      if (window.innerWidth === lastWidth && W !== undefined) return;
+      lastWidth = window.innerWidth;
+      W = canvas.width = innerWidth;
+      H = canvas.height = innerHeight;
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    class Particle{
+      constructor(){this.reset()}
+      reset(){
+        this.x=Math.random()*W;this.y=Math.random()*H;
+        this.vx=(Math.random()-.5)*0.4;this.vy=(Math.random()-.5)*0.4;
+        this.r=Math.random()*1.5+0.5;this.a=Math.random()*0.5+0.1;
+      }
+      update(){
+        this.x+=this.vx;this.y+=this.vy;
+        if(this.x<0||this.x>W||this.y<0||this.y>H)this.reset();
+      }
+      draw(){
+        ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+        ctx.fillStyle=`rgba(30,110,245,${this.a})`;ctx.fill();
       }
     }
+    for(let i=0;i<80;i++) particles.push(new Particle());
+
+    function drawLines(){
+      for(let i=0;i<particles.length;i++){
+        for(let j=i+1;j<particles.length;j++){
+          const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
+          const d=Math.sqrt(dx*dx+dy*dy);
+          if(d<120){
+            ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);
+            ctx.strokeStyle=`rgba(30,110,245,${0.15*(1-d/120)})`;ctx.lineWidth=0.5;ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animate(){
+      requestAnimationFrame(animate);
+      if (W <= 768) {
+          ctx.clearRect(0,0,W,H);
+          return; 
+      }
+      ctx.clearRect(0,0,W,H);
+      particles.forEach(p=>{p.update();p.draw()});
+      drawLines();
+    }
+    animate();
   }
-}
-function animate(){
-  ctx.clearRect(0,0,W,H);
-  particles.forEach(p=>{p.update();p.draw()});
-  drawLines();
-  requestAnimationFrame(animate);
-}
-animate();
 
-// ── GSM Counter ──
-let gsmDone=false;
-function animateGSM(){
-  if(gsmDone)return;gsmDone=true;
-  const el=document.getElementById('counter-gsm');
-  let v=0;const target=1200;const dur=1800;const start=Date.now();
-  function tick(){
-    const p=Math.min((Date.now()-start)/dur,1);
-    const ease=1-Math.pow(1-p,3);
-    v=Math.round(ease*target);
-    el.innerHTML=v+'<span>GSM</span>';
-    if(p<1)requestAnimationFrame(tick);
+  // ── Scroll reveal ──
+  const reveals=document.querySelectorAll('.reveal');
+  const ro=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+  },{threshold:0.12});
+  reveals.forEach(r=>ro.observe(r));
+
+  // ── GSM Counter ──
+  let gsmDone=false;
+  function animateGSM(){
+    if(gsmDone)return;gsmDone=true;
+    const el=document.getElementById('counter-gsm');
+    let v=0;const target=1200;const dur=1800;const start=Date.now();
+    function tick(){
+      const p=Math.min((Date.now()-start)/dur,1);
+      const ease=1-Math.pow(1-p,3);
+      v=Math.round(ease*target);
+      el.innerHTML=v+'<span>GSM</span>';
+      if(p<1)requestAnimationFrame(tick);
+    }
+    tick();
   }
-  tick();
+  const obs=new IntersectionObserver(e=>{if(e[0].isIntersecting)animateGSM()});
+  const gsmEl = document.getElementById('counter-gsm');
+  if(gsmEl) obs.observe(gsmEl);
+
+});
+
+// ── Countdown with localStorage persistence ──
+const COUNTDOWN_KEY = 'turboEgyptCountdownEnd';
+let countdownEnd;
+const storedEnd = localStorage.getItem(COUNTDOWN_KEY);
+if (storedEnd && parseInt(storedEnd) > Date.now()) {
+  countdownEnd = parseInt(storedEnd);
+} else {
+  countdownEnd = Date.now() + (23*3600 + 59*60 + 47) * 1000;
+  localStorage.setItem(COUNTDOWN_KEY, countdownEnd);
 }
-const obs=new IntersectionObserver(e=>{if(e[0].isIntersecting)animateGSM()});
-obs.observe(document.getElementById('counter-gsm'));
 
-// ── Scroll reveal ──
-const reveals=document.querySelectorAll('.reveal');
-const ro=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
-},{threshold:0.12});
-reveals.forEach(r=>ro.observe(r));
-
-// ── Countdown ──
-const end=Date.now()+(23*3600+59*60+47)*1000;
 function tickT(){
-  const r=Math.max(0,end-Date.now());
-  const h=Math.floor(r/3600000),m=Math.floor((r%3600000)/60000),s=Math.floor((r%60000)/1000);
-  document.getElementById('cdh').textContent=String(h).padStart(2,'0');
-  document.getElementById('cdm').textContent=String(m).padStart(2,'0');
-  document.getElementById('cds').textContent=String(s).padStart(2,'0');
+  const r = Math.max(0, countdownEnd - Date.now());
+  const h = Math.floor(r/3600000);
+  const m = Math.floor((r%3600000)/60000);
+  const s = Math.floor((r%60000)/1000);
+  const cdh = document.getElementById('cdh');
+  const cdm = document.getElementById('cdm');
+  const cds = document.getElementById('cds');
+  if(cdh) cdh.textContent = String(h).padStart(2,'0');
+  if(cdm) cdm.textContent = String(m).padStart(2,'0');
+  if(cds) cds.textContent = String(s).padStart(2,'0');
 }
 setInterval(tickT,1000);tickT();
 
@@ -1125,17 +1319,15 @@ let stock=47;
 setInterval(()=>{
   if(stock>12&&Math.random()<0.3){
     stock--;
-    document.getElementById('stock-n').textContent=stock;
-    document.getElementById('cd-stock').textContent=stock;
+    const stockN = document.getElementById('stock-n');
+    const cdStock = document.getElementById('cd-stock');
+    if(stockN) stockN.textContent=stock;
+    if(cdStock) cdStock.textContent=stock;
   }
 },30000);
-</script>
 
-<div class="mobile-sticky-cta">
-  <a href="#order-section">
-    اطلب الآن — <span id="sticky-price">180</span> جنيه فقط
-  </a>
-</div>
+updatePriceDisplay();
+</script>
 
 </body>
 </html>
