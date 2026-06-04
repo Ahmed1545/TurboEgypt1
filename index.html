@@ -653,11 +653,13 @@ footer span{color:var(--blue2);font-weight:900}
   position:relative;
   animation:fadeDown .6s ease .25s both;
 }
-.hero-product-preview img{
+.hero-product-preview img,
+.hero-product-preview video{
   width:100%;
   border-radius:18px;
   border:1px solid rgba(29,110,245,0.25);
   box-shadow:0 20px 60px rgba(29,110,245,0.18);
+  display:block;
 }
 
 .social-proof-bar{
@@ -764,7 +766,9 @@ footer span{color:var(--blue2);font-weight:900}
   </div>
 
   <div class="hero-product-preview">
-    <img src="https://static.wixstatic.com/media/f8bc45_1d280f30fc9443b092dc9e125083e5af~mv2.jpg" alt="Turbo Egypt Towel" fetchpriority="high" loading="eager" decoding="async">
+    <video autoplay muted loop playsinline preload="auto" style="width:100%;border-radius:18px;border:1px solid rgba(29,110,245,0.25);box-shadow:0 20px 60px rgba(29,110,245,0.18);display:block;">
+      <source src="https://res.cloudinary.com/dafwsqlzh/video/upload/q_auto,f_auto/v1780587544/How_many_towels_does_it_take_you_to_dry_a_car__cardetailing_shorts_fxbmch.mp4" type="video/mp4">
+    </video>
   </div>
 
   <div class="hero-stats">
@@ -885,26 +889,6 @@ footer span{color:var(--blue2);font-weight:900}
   </div>
 </section>
 
-<section class="video-section reveal" style="position:relative;z-index:1;padding:80px 5%;background:linear-gradient(180deg,var(--card),var(--bg));border-top:1px solid var(--border);">
-  <div style="max-width:700px;margin:0 auto;text-align:center;">
-    <span class="section-eyebrow">// شوف بنفسك</span>
-    
-    <p class="section-p" style="margin:0 auto 36px;">شوف بنفسك الفرق — تنشيف احترافي في ثواني</p>
-    <div style="position:relative;width:100%;max-width:380px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 0 60px rgba(29,110,245,0.25);border:1px solid rgba(29,110,245,0.2);">
-      <video
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="none"
-        style="width:100%;display:block;"
-        poster=""
-      >
-        <source src="https://res.cloudinary.com/dafwsqlzh/video/upload/q_auto,f_auto/v1780587544/How_many_towels_does_it_take_you_to_dry_a_car__cardetailing_shorts_fxbmch.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
 
 <section class="product-section" id="order-section">
   <div class="product-inner">
