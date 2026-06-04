@@ -891,16 +891,17 @@ footer span{color:var(--blue2);font-weight:900}
     
     <p class="section-p" style="margin:0 auto 36px;">شوف بنفسك الفرق — تنشيف احترافي في ثواني</p>
     <div style="position:relative;width:100%;max-width:380px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 0 60px rgba(29,110,245,0.25);border:1px solid rgba(29,110,245,0.2);">
-      <div style="position:relative;padding-top:177.78%;">
-        <iframe
-          id="hero-video"
-          src="about:blank" data-src="https://drive.google.com/file/d/1SwlJngzyAQSKsuZPBmGMcs9gVJKJBDdk/preview?autoplay=1" loading="lazy"
-          style="position:absolute;inset:0;width:100%;height:100%;border:none;"
-          allow="autoplay; encrypted-media"
-          allowfullscreen
-          title="Turbo Egypt 1200 GSM Microfiber Towel Demo"
-        ></iframe>
-      </div>
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="none"
+        style="width:100%;display:block;"
+        poster=""
+      >
+        <source src="https://res.cloudinary.com/dafwsqlzh/video/upload/q_auto,f_auto/v1780587544/How_many_towels_does_it_take_you_to_dry_a_car__cardetailing_shorts_fxbmch.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
@@ -1352,20 +1353,6 @@ setInterval(()=>{
 
 updatePriceDisplay();
 
-// ── Lazy load Drive iframe when it enters viewport ──
-(function(){
-  var iframe = document.getElementById('hero-video');
-  if(!iframe) return;
-  var src = iframe.getAttribute('data-src');
-  if(!src) return;
-  var obs = new IntersectionObserver(function(entries){
-    if(entries[0].isIntersecting){
-      iframe.src = src;
-      obs.disconnect();
-    }
-  }, {rootMargin:'200px'});
-  obs.observe(iframe);
-})();
 
 </script>
 
