@@ -1216,13 +1216,15 @@ function sendOrder() {
   submitBtn.style.opacity = '0.8';
   submitBtn.style.pointerEvents = 'none';
 
-  window.location.href = url;
+  // 1. إرسال حدث الشراء للبيكسل فوراً مع قيمة الطلب والعملة
+  if (typeof fbq !== 'undefined') {
+    fbq('track', 'Purchase', { value: total, currency: 'EGP' });
+  }
 
+  // 2. تأخير التحويل 500 مللي ثانية (نصف ثانية) لضمان وصول البيانات لسيرفرات فيسبوك
   setTimeout(() => {
-    submitBtn.innerHTML = originalText;
-    submitBtn.style.opacity = '1';
-    submitBtn.style.pointerEvents = 'auto';
-  }, 3000);
+    window.location.href = url;
+  }, 500);
 }
 
 // ── تأجيل تحميل التأثيرات والأشياء الثقيلة عشان الصفحة تفتح فوراً ──
