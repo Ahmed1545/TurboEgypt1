@@ -2,8 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 
-  <!-- Meta Pixel Code -->
-<script>
+  <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -18,7 +17,6 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1329678549107341&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Turbo Egypt — فوطة 1200 GSM</title>
@@ -935,7 +933,7 @@ footer span{color:var(--blue2);font-weight:900}
       <div class="sizes-row">
         <div class="sz on" onclick="pickSize(this, '30×40', 180)"><span class="sz-n">30×40</span><span class="sz-s">للتفاصيل</span></div>
         <div class="sz" onclick="pickSize(this, '40×40', 230)"><span class="sz-n">40×40</span><span class="sz-s">الأكثر طلباً ⭐</span></div>
-        <div class="sz" onclick="pickSize(this, '40×60', 280)"><span class="sz-n">40×60</span><span class="sz-s">متاح الآن ✅</span></div>
+        <div class="sz" onclick="pickSize(this, '40×60', 295)"><span class="sz-n">40×60</span><span class="sz-s">متاح الآن ✅</span></div>
       </div>
 
       <p style="font-size:14px;color:#8899bb;font-weight:900;margin-bottom:0px;margin-top:20px;">2. حدد الكمية المطلوبة:</p>
@@ -1094,7 +1092,7 @@ let currentBasePrice = 180;
 const sizePrices = {
   '30×40': { price: 180, oldPrice: 300 },
   '40×40': { price: 230, oldPrice: 380 },
-  '40×60': { price: 280, oldPrice: 450 },
+  '40×60': { price: 295, oldPrice: 450 },
 };
 
 function updatePriceDisplay() {
@@ -1194,8 +1192,12 @@ function sendOrder() {
   const custAddress = `${gov} - ${district} - ${street}${floor ? ' - ' + floor : ''}`;
   const newPrice = quantity * currentBasePrice;
   const total = newPrice + CONFIG.SHIPPING_FEE;
+  
+  // إنشاء متغير التاريخ والوقت
+  const orderDate = new Date().toLocaleString('ar-EG', { hour12: true });
 
   const msg = `أهلاً، عايز أطلب فوطة مايكروفايبر 1200 GSM من Turbo Egypt\n\n` +
+              `🕒 *تاريخ ووقت الطلب:* ${orderDate}\n\n` +
               `📋 *بيانات الطلب:*\n` +
               `- المقاس: ${selectedSize}\n` +
               `- الكمية: ${quantity} قطعة\n` +
